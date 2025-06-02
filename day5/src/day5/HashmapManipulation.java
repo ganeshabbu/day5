@@ -21,9 +21,16 @@ public class HashmapManipulation {
 		int z = sc.nextInt();
 		String c = sc.nextLine();
 		students.replace(z, c);
+		System.out.println("updated hashmap:");
+		for (Map.Entry<Integer, String> entry : students.entrySet()) {
+            System.out.println( entry.getKey() + "," + entry.getValue());
+        }
 		System.out.println("checking the value");
 		int x = sc.nextInt();
 		String v = sc.nextLine();
+		if(students.containsKey(x)) {
+			System.out.println("Found");
+		}
 		for (Map.Entry<Integer, String> entry : students.entrySet()) {
             System.out.println( entry.getKey() + "," + entry.getValue());
         }
